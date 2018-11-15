@@ -1,0 +1,210 @@
+$comment
+	File created using the following command:
+		vcd file Hamming_Code.msim.vcd -direction
+$end
+$date
+	Thu Nov 15 18:41:15 2018
+$end
+$version
+	ModelSim Version 10.5b
+$end
+$timescale
+	1ps
+$end
+
+$scope module hammingencoder_vhd_vec_tst $end
+$var wire 1 ! dIn [10] $end
+$var wire 1 " dIn [9] $end
+$var wire 1 # dIn [8] $end
+$var wire 1 $ dIn [7] $end
+$var wire 1 % dIn [6] $end
+$var wire 1 & dIn [5] $end
+$var wire 1 ' dIn [4] $end
+$var wire 1 ( dIn [3] $end
+$var wire 1 ) dIn [2] $end
+$var wire 1 * dIn [1] $end
+$var wire 1 + dIn [0] $end
+$var wire 1 , dOut [14] $end
+$var wire 1 - dOut [13] $end
+$var wire 1 . dOut [12] $end
+$var wire 1 / dOut [11] $end
+$var wire 1 0 dOut [10] $end
+$var wire 1 1 dOut [9] $end
+$var wire 1 2 dOut [8] $end
+$var wire 1 3 dOut [7] $end
+$var wire 1 4 dOut [6] $end
+$var wire 1 5 dOut [5] $end
+$var wire 1 6 dOut [4] $end
+$var wire 1 7 dOut [3] $end
+$var wire 1 8 dOut [2] $end
+$var wire 1 9 dOut [1] $end
+$var wire 1 : dOut [0] $end
+
+$scope module i1 $end
+$var wire 1 ; gnd $end
+$var wire 1 < vcc $end
+$var wire 1 = unknown $end
+$var wire 1 > devoe $end
+$var wire 1 ? devclrn $end
+$var wire 1 @ devpor $end
+$var wire 1 A ww_devoe $end
+$var wire 1 B ww_devclrn $end
+$var wire 1 C ww_devpor $end
+$var wire 1 D ww_dIn [10] $end
+$var wire 1 E ww_dIn [9] $end
+$var wire 1 F ww_dIn [8] $end
+$var wire 1 G ww_dIn [7] $end
+$var wire 1 H ww_dIn [6] $end
+$var wire 1 I ww_dIn [5] $end
+$var wire 1 J ww_dIn [4] $end
+$var wire 1 K ww_dIn [3] $end
+$var wire 1 L ww_dIn [2] $end
+$var wire 1 M ww_dIn [1] $end
+$var wire 1 N ww_dIn [0] $end
+$var wire 1 O ww_dOut [14] $end
+$var wire 1 P ww_dOut [13] $end
+$var wire 1 Q ww_dOut [12] $end
+$var wire 1 R ww_dOut [11] $end
+$var wire 1 S ww_dOut [10] $end
+$var wire 1 T ww_dOut [9] $end
+$var wire 1 U ww_dOut [8] $end
+$var wire 1 V ww_dOut [7] $end
+$var wire 1 W ww_dOut [6] $end
+$var wire 1 X ww_dOut [5] $end
+$var wire 1 Y ww_dOut [4] $end
+$var wire 1 Z ww_dOut [3] $end
+$var wire 1 [ ww_dOut [2] $end
+$var wire 1 \ ww_dOut [1] $end
+$var wire 1 ] ww_dOut [0] $end
+$var wire 1 ^ \dOut[0]~output_o\ $end
+$var wire 1 _ \dOut[1]~output_o\ $end
+$var wire 1 ` \dOut[2]~output_o\ $end
+$var wire 1 a \dOut[3]~output_o\ $end
+$var wire 1 b \dOut[4]~output_o\ $end
+$var wire 1 c \dOut[5]~output_o\ $end
+$var wire 1 d \dOut[6]~output_o\ $end
+$var wire 1 e \dOut[7]~output_o\ $end
+$var wire 1 f \dOut[8]~output_o\ $end
+$var wire 1 g \dOut[9]~output_o\ $end
+$var wire 1 h \dOut[10]~output_o\ $end
+$var wire 1 i \dOut[11]~output_o\ $end
+$var wire 1 j \dOut[12]~output_o\ $end
+$var wire 1 k \dOut[13]~output_o\ $end
+$var wire 1 l \dOut[14]~output_o\ $end
+$var wire 1 m \dIn[4]~input_o\ $end
+$var wire 1 n \dIn[8]~input_o\ $end
+$var wire 1 o \dIn[6]~input_o\ $end
+$var wire 1 p \dIn[0]~input_o\ $end
+$var wire 1 q \dIn[3]~input_o\ $end
+$var wire 1 r \dIn[2]~input_o\ $end
+$var wire 1 s \dIn[9]~input_o\ $end
+$var wire 1 t \dOut~0_combout\ $end
+$var wire 1 u \dOut~1_combout\ $end
+$var wire 1 v \dIn[1]~input_o\ $end
+$var wire 1 w \dIn[7]~input_o\ $end
+$var wire 1 x \dOut~2_combout\ $end
+$var wire 1 y \dIn[5]~input_o\ $end
+$var wire 1 z \dOut~3_combout\ $end
+$var wire 1 { \dIn[10]~input_o\ $end
+$var wire 1 | \dOut~4_combout\ $end
+$var wire 1 } \dOut~5_combout\ $end
+$upscope $end
+$upscope $end
+$enddefinitions $end
+#0
+$dumpvars
+0;
+1<
+x=
+1>
+1?
+1@
+1A
+1B
+1C
+0^
+0_
+1`
+0a
+0b
+0c
+1d
+0e
+0f
+0g
+1h
+0i
+0j
+0k
+1l
+0m
+0n
+1o
+0p
+0q
+1r
+0s
+1t
+0u
+0v
+0w
+0x
+0y
+0z
+1{
+1|
+0}
+1!
+0"
+0#
+0$
+1%
+0&
+0'
+0(
+1)
+0*
+0+
+1,
+0-
+0.
+0/
+10
+01
+02
+03
+14
+05
+06
+07
+18
+09
+0:
+1D
+0E
+0F
+0G
+1H
+0I
+0J
+0K
+1L
+0M
+0N
+1O
+0P
+0Q
+0R
+1S
+0T
+0U
+0V
+1W
+0X
+0Y
+0Z
+1[
+0\
+0]
+$end
+#1000000

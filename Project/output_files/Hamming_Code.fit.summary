@@ -1,0 +1,20 @@
+Fitter Status : Successful - Thu Nov 15 18:42:06 2018
+Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
+Revision Name : Hamming_Code
+Top-level Entity Name : HammingEncoder
+Family : Cyclone IV GX
+Device : EP4CGX15BF14C6
+Timing Models : Final
+Total logic elements : 6 / 14,400 ( < 1 % )
+    Total combinational functions : 6 / 14,400 ( < 1 % )
+    Dedicated logic registers : 0 / 14,400 ( 0 % )
+Total registers : 0
+Total pins : 26 / 81 ( 32 % )
+Total virtual pins : 0
+Total memory bits : 0 / 552,960 ( 0 % )
+Embedded Multiplier 9-bit elements : 0
+Total GXB Receiver Channel PCS : 0 / 2 ( 0 % )
+Total GXB Receiver Channel PMA : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PCS : 0 / 2 ( 0 % )
+Total GXB Transmitter Channel PMA : 0 / 2 ( 0 % )
+Total PLLs : 0 / 3 ( 0 % )

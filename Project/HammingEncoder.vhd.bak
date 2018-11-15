@@ -1,0 +1,49 @@
+library IEEE;
+use IEEE.std_logic_1164.all;
+
+entity HammingEncoder is
+	port(dIn  : in std_logic_vector(10 downto 0);
+		  dOut : out std_logic_vector(14 downto 0));
+		  
+end HammingEncoder;
+
+architecture Behavioral of HammingEncoder is
+begin
+
+	dout(0) = ((dIn(0) and '1' ) or (dIn(1) and G12 ) or (dIn(2) and G13 ) or (dIn(3) and G14 ) or (dIn(4) and G15 ) or (dIn(5) and G16) or (dIn(6) and G17) or
+			(dIn(7) and G18) or (dIn(8) and G19) or (dIn(9) and G110) or (dIn(10) and G111));
+	
+	dout(1) = ((dIn(0) and G21 ) or (dIn(1) and G22 ) or (dIn(2) and G23 ) or (dIn(3) and G24 ) or (dIn(4) and G25 ) or (dIn(5) and G26) or (dIn(6) and G27) or
+			(dIn(7) and G28) or (dIn(8) and G29) or (dIn(9) and G210) or (dIn(10) and G211));
+	
+	dout(2) = ((dIn(0) and G31 ) or (dIn(1) and G32 ) or (dIn(2) and G33 ) or (dIn(3) and G34 ) or (dIn(4) and G35 ) or (dIn(5) and G36) or (dIn(6) and G37) or
+			(dIn(7) and G38) or (dIn(8) and G39) or (dIn(9) and G310) or (dIn(10) and G311));
+			
+	dout(3) = ((dIn(0) and G41 ) or (dIn(1) and G42 ) or (dIn(2) and G43 ) or (dIn(3) and G44 ) or (dIn(4) and G45 ) or (dIn(5) and G46) or (dIn(6) and G47) or
+			(dIn(7) and G48) or (dIn(8) and G49) or (dIn(9) and G410) or (dIn(10) and G411));
+	
+	dout(4) = ((dIn(0) and G51 ) or (dIn(1) and G52 ) or (dIn(2) and G53 ) or (dIn(3) and G54 ) or (dIn(4) and G55 ) or (dIn(5) and G56) or (dIn(6) and G57) or
+			(dIn(7) and G58) or (dIn(8) and G59) or (dIn(9) and G510) or (dIn(10) and G511));
+
+	dout(5) = ((dIn(0) and G61 ) or (dIn(1) and G62 ) or (dIn(2) and G63 ) or (dIn(3) and G64 ) or (dIn(4) and G65 ) or (dIn(5) and G66) or (dIn(6) and G67) or
+		(dIn(7) and G68) or (dIn(8) and G69) or (dIn(9) and G610) or (dIn(10) and G611));	
+	
+	dout(6) = ((dIn(0) and G31 ) or (dIn(1) and G32 ) or (dIn(2) and G33 ) or (dIn(3) and G34 ) or (dIn(4) and G35 ) or (dIn(5) and G36) or (dIn(6) and G37) or
+			(dIn(7) and G38) or (dIn(8) and G39) or (dIn(9) and G310) or (dIn(10) and G311));	
+	
+	dout(7) = ((dIn(0) and G31 ) or (dIn(1) and G32 ) or (dIn(2) and G33 ) or (dIn(3) and G34 ) or (dIn(4) and G35 ) or (dIn(5) and G36) or (dIn(6) and G37) or
+			(dIn(7) and G38) or (dIn(8) and G39) or (dIn(9) and G310) or (dIn(10) and G311));
+			
+	dout(8) = ((dIn(0) and G31 ) or (dIn(1) and G32 ) or (dIn(2) and G33 ) or (dIn(3) and G34 ) or (dIn(4) and G35 ) or (dIn(5) and G36) or (dIn(6) and G37) or
+			(dIn(7) and G38) or (dIn(8) and G39) or (dIn(9) and G310) or (dIn(10) and G311));
+			
+	dout(9) = ((dIn(0) and G31 ) or (dIn(1) and G32 ) or (dIn(2) and G33 ) or (dIn(3) and G34 ) or (dIn(4) and G35 ) or (dIn(5) and G36) or (dIn(6) and G37) or
+			(dIn(7) and G38) or (dIn(8) and G39) or (dIn(9) and G310) or (dIn(10) and G311));
+			
+	dout(10) = ((dIn(0) and G31 ) or (dIn(1) and G32 ) or (dIn(2) and G33 ) or (dIn(3) and G34 ) or (dIn(4) and G35 ) or (dIn(5) and G36) or (dIn(6) and G37) or
+			(dIn(7) and G38) or (dIn(8) and G39) or (dIn(9) and G310) or (dIn(10) and G311));
+			
+			
+
+
+end Behavioral;

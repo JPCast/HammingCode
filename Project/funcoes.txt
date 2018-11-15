@@ -1,0 +1,33 @@
+dout(0) = ((dIn(0) and '1' ) xor (dIn(1) and '0' ) xor (dIn(2) and G13 ) or (dIn(3) and G14 ) xor (dIn(4) and G15 ) xor (dIn(5) and G16) xor (dIn(6) and G17) xor
+			(dIn(7) and G18) xor (dIn(8) and G19) xor (dIn(9) and G110) xor (dIn(10) and G111));
+	
+	dout(1) = ((dIn(0) and G21 ) xor (dIn(1) and G22 ) xor (dIn(2) and G23 ) xor (dIn(3) and G24 ) xor (dIn(4) and G25 ) xor (dIn(5) and G26) xor (dIn(6) and G27) xor
+			(dIn(7) and G28) or (dIn(8) and G29) or (dIn(9) and G210) or (dIn(10) and G211));
+	
+	dout(2) = ((dIn(0) and G31 ) xor (dIn(1) and G32 ) xor (dIn(2) and G33 ) xor (dIn(3) and G34 ) xor (dIn(4) and G35 ) xor (dIn(5) and G36) xor (dIn(6) and G37) xor
+			(dIn(7) and G38) xor (dIn(8) and G39) xor (dIn(9) and G310) xor (dIn(10) and G311));
+			
+	dout(3) = ((dIn(0) and G41 ) xor (dIn(1) and G42 ) xor (dIn(2) and G43 ) xor (dIn(3) and G44 ) xor (dIn(4) and G45 ) xor (dIn(5) and G46) xor (dIn(6) and G47) xor
+			(dIn(7) and G48) xor (dIn(8) and G49) xor (dIn(9) and G410) xor (dIn(10) and G411));
+			
+	dout(4) = ((dIn(0) and G51 ) xor (dIn(1) and G52 ) xor (dIn(2) and G53 ) xor (dIn(3) and G54 ) xor (dIn(4) and G55 ) xor (dIn(5) and G56) xor (dIn(6) and G57) xor
+			(dIn(7) and G58) xor (dIn(8) and G59) xor (dIn(9) and G510) xor (dIn(10) and G511));
+
+	dout(5) = ((dIn(0) and G61 ) xor (dIn(1) and G62 ) xor (dIn(2) and G63 ) xor (dIn(3) and G64 ) xor (dIn(4) and G65 ) xor (dIn(5) and G66) xor (dIn(6) and G67) xor
+		(dIn(7) and G68) xor (dIn(8) and G69) xor (dIn(9) and G610) xor (dIn(10) and G611));	
+	
+	dout(6) = ((dIn(0) and G71 ) xor (dIn(1) and G72 ) xor (dIn(2) and G73 ) xor (dIn(3) and G74 ) xor (dIn(4) and G75 ) xor (dIn(5) and G76) xor (dIn(6) and G77) xor
+			(dIn(7) and G78) xor (dIn(8) and G79) xor (dIn(9) and G710) xor (dIn(10) and G711));	
+	
+	dout(7) = ((dIn(0) and G81 ) xor (dIn(1) and G82 ) xor (dIn(2) and G83 ) xor (dIn(3) and G84 ) xor (dIn(4) and G85 ) xor (dIn(5) and G86) xor (dIn(6) and G87) xor
+			(dIn(7) and G88) xor (dIn(8) and G89) xor (dIn(9) and G810) xor (dIn(10) and G811));
+			
+	dout(8) = ((dIn(0) and G91 ) xor (dIn(1) and G92 ) xor (dIn(2) and G93 ) xor (dIn(3) and G94 ) xor (dIn(4) and G95 ) xor (dIn(5) and G96) xor (dIn(6) and G97) xor
+			(dIn(7) and G98) xor (dIn(8) and G99) xor (dIn(9) and G910) xor (dIn(10) and G911));
+			
+	dout(9) = ((dIn(0) and G101 ) xor (dIn(1) and G102 ) xor (dIn(2) and G103 ) xor (dIn(3) and G104 ) xor (dIn(4) and G105 ) xor (dIn(5) and G106) xor (dIn(6) and G107) xor
+			(dIn(7) and G108) xor (dIn(8) and G109) xor (dIn(9) and G1010) xor (dIn(10) and G1011));
+			
+	dout(10) = ((dIn(0) and G111 ) xor (dIn(1) and G112 ) xor (dIn(2) and G113 ) xor (dIn(3) and G114 ) xor (dIn(4) and G115 ) xor (dIn(5) and G116) xor (dIn(6) and G117) xor
+			(dIn(7) and G118) xor (dIn(8) and G119) xor (dIn(9) and G1110) xor (dIn(10) and G1111));
+			
