@@ -2,43 +2,46 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity HammingEncoder is
-	port(dIn  : in std_logic_vector(10 downto 0);
-		  dOut : out std_logic_vector(14 downto 0));
+	port(m  : in std_logic_vector(10 downto 0);
+		  x : out std_logic_vector(14 downto 0));
 		  
 end HammingEncoder;
 
 architecture Behavioral of HammingEncoder is
+	signal r1: std_logic := m(0) xor m(1);
+	signal r2: std_logic := r1 xor m(2) xor m(3);
+	signal r3: std_logic := m(4) xor m(5) xor m(6);
 begin
 
-	dOut(0) <= dIn(9) xor dIn(8) xor dIn(6) xor dIn(4) xor dIn(3) xor dIn(2) xor dIn(0);
+	x(0) <= m(10) xor m(9) xor r3 xor m(2) xor m(0);
 
-	dOut(1) <= dIn(8) xor dIn(7) xor dIn(5) xor dIn(4) xor dIn(3) xor dIn(1) xor dIn(0);
+	x(1) <= m(8) xor m(7) xor r3 xor r1;
 
-	dOut(2) <= dIn(10) xor dIn(7) xor dIn(6) xor dIn(4) xor dIn(2) xor dIn(1) xor dIn(0);
+	x(2) <= m(9) xor m(8) xor m(5) xor r2;
 	
-	dOut(3) <= dIn(10) xor dIn(9) xor dIn(5) xor dIn(3) xor dIn(2) xor dIn(1) xor dIn(0);
+	x(3) <= m(10) xor m(7) xor m(4) xor r2;
 	
-	dout(4) <= dIn(0);
+	x(4) <= m(0);
 	
-	dout(5) <= dIn(1);
+	x(5) <= m(1);
 	
-	dout(6) <= dIn(2);
+	x(6) <= m(2);
 
-	dout(7) <= dIn(3);
+	x(7) <= m(3);
 
-	dout(8) <= dIn(4);	
+	x(8) <= m(4);	
 
-	dout(9) <= dIn(5);	
+	x(9) <= m(5);	
 
-	dout(10) <= dIn(6);
+	x(10) <= m(6);
 	
-	dout(11) <= dIn(7);
+	x(11) <= m(7);
 
-	dout(12) <= dIn(8);
+	x(12) <= m(8);
 
-	dout(13) <= dIn(9);
+	x(13) <= m(9);
 
-	dout(14) <= dIn(10);
+	x(14) <= m(10);
 	
 	
 		
