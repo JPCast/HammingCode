@@ -1,5 +1,6 @@
 library IEEE;
 use IEEE.std_logic_1164.all;
+library xor_operator.all;
 
 entity HammingEncoder is
 	port(m  : in std_logic_vector(10 downto 0);
@@ -7,11 +8,23 @@ entity HammingEncoder is
 		  
 end HammingEncoder;
 
-architecture Behavioral of HammingEncoder is
+architecture Structural of HammingEncoder is
+	component xor_operator
+		port(m1, m2 : in std_logic;
+				x		: out std_logic);
+	end component;
+	
+	signal dOut: std_logic_vector(23 downto 0);
+				
 	signal r1: std_logic := m(0) xor m(1);
 	signal r2: std_logic := r1 xor m(2) xor m(3);
 	signal r3: std_logic := m(4) xor m(5) xor m(6);
 begin
+
+	xor_operator0: xor_operator(m(10), m(7), dOut(0));
+	xor_operator1: xor_operator(dOut(0), m(4), dOut(1));
+	xor_operator2: xor_operator(dOut(1), m(4), dOut(2));
+	
 
 	x(0) <= m(10) xor m(9) xor r3 xor m(2) xor m(0);
 
