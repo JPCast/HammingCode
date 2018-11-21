@@ -37,8 +37,8 @@ begin
 	xor_operator9: xor_operator port map(m(8), m(7), dOut(9)); -- dout9 = m8 xor m7
 	xor_operator10: xor_operator port map(m(6), m(5), dOut(10)); -- dout10 = m6 xor m5
 	xor_operator11: xor_operator port map(dOut(10), m(4), dOut(11)); -- dout11 = dOut10 xor m4 = m6 xor m5 xor m4
-	xor_operator12: xor_operator port map(dOut(9), dOut(11), dOut(12)); -- dout12 = dOut9 xor dOut11 = (m8 xor m7) xor (m6 xor m5 xor m4)
-	xor_operator13: xor_operator port map(dOut(12), dOut(3), dOut(13)); -- x1 = dout13 = dOut12 xor dOut3 = (m8 xor m7) xor ((m6 xor m5) xor m4) xor (m0 xor m1)
+	xor_operator12: xor_operator port map(dOut(9), dOut(3), dOut(12)); -- dout12 = dOut9 xor dOut3 = (m8 xor m7) xor (m0 xor m1)
+	xor_operator13: xor_operator port map(dOut(12), dOut(11), dOut(13)); -- x1 = dout13 = dOut12 xor dOut11s = (m8 xor m7) xor ((m6 xor m5) xor m4) xor (m0 xor m1)
 	
 	---------operacao x0------------
 	xor_operator14: xor_operator port map(m(10), m(9), dOut(14)); -- dout14 = m10 xor m9
@@ -46,36 +46,36 @@ begin
 	xor_operator16: xor_operator port map(m(2), m(0), dOut(16)); -- dout16 = m2 xor m0
 	xor_operator17: xor_operator port map(dOut(15), dOut(16), dOut(17)); -- x0 = dout17 = dOut15 xor dOut16 = (m10 xor m9) xor ((m6 xor m5) xor m4) xor (m2 xor m0)
 
+			
+	x(0) <= m(0);
 	
-	x(0) <= dOut(17);
-
-	x(1) <= dOut(13);
-
-	x(2) <= dOut(8);
+	x(1) <= m(1);
 	
-	x(3) <= dOut(5);
+	x(2) <= m(2);
+
+	x(3) <= m(3);
+
+	x(4) <= m(4);	
+
+	x(5) <= m(5);	
+
+	x(6) <= m(6);
 	
-	x(4) <= m(0);
+	x(7) <= m(7);
+
+	x(8) <= m(8);
+
+	x(9) <= m(9);
+
+	x(10) <= m(10);
+			
+	x(11) <= dOut(5);
 	
-	x(5) <= m(1);
+	x(12) <= dOut(8);
+
+	x(13) <= dOut(13);
 	
-	x(6) <= m(2);
+	x(14) <= dOut(17);
 
-	x(7) <= m(3);
 
-	x(8) <= m(4);	
-
-	x(9) <= m(5);	
-
-	x(10) <= m(6);
-	
-	x(11) <= m(7);
-
-	x(12) <= m(8);
-
-	x(13) <= m(9);
-
-	x(14) <= m(10);
-	
-		
 end Structural;
