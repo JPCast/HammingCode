@@ -1,18 +1,18 @@
 ------------------------------------------------------------------------------------------------
-----------------------------Full Adder----------------------------------------------------------
+---------------------------- Adder -------------------------------------------------------------
 
 library IEEE;
 use IEEE.std_logic_1164.all;
 
 
-entity fullAdder is
+entity Adder is
 	port(a, b : in std_logic;
 			cout : out std_logic);
-end fullAdder;
+end Adder;
 
-architecture Behavioral of fullAdder is
+architecture Behavioral of Adder is
 begin
-	cout <= a xor b;
+	cout <= a and b;
 end Behavioral;
 
 
@@ -89,31 +89,47 @@ end  Behavioral;
 
 
 -------------------------------------------------------------------------------------------------------------------
----------------------------- Flip flop Prof nao correto  ----------------------------------------------------------
+---------------------------- Flip flop D---------------------------------------------------------------------------
 LIBRARY ieee;
 USE ieee.std_logic_1164.all;
 
 ENTITY flipFlopDSimul IS
   PORT (clk, D: IN STD_LOGIC;
-        nSet, nRst: IN STD_LOGIC;
-        Q, nQ: OUT STD_LOGIC);
+        Q     : OUT STD_LOGIC);
 END flipFlopDSimul;
 
 ARCHITECTURE behavior OF flipFlopDSimul IS
 BEGIN
-  PROCESS (clk, nSet, nRst)
+  PROCESS (clk)
   BEGIN
-    IF (nRst = '0')
-        THEN Q <= '0';
-             nQ <= '1';
-        ELSIF (nSet = '0')
-              THEN Q <= '1';
-                   nQ <= '0';
-              ELSIF (clk = '1') AND (clk'EVENT)
-                    THEN Q <= D;
-                         nQ <= NOT D;
+	 if(rising_edge(clk)) then
+		Q<=D;
     END IF;
   END PROCESS;
 END behavior;
 
+-------------------------------------------------------------------------------------------------------------------
+---------------------------- Flip flop D 4 por 4-------------------------------------------------------------------
+LIBRARY ieee;
 
+library IEEE;
+use IEEE.STD_LOGIC_1164.all;
+
+entity flipflop4_4 is
+	port(clk : in std_logic;
+			D  : in std_logic_vector(3 downto 0);
+			Q  : out std_logic_vector(3 downto 0));
+end flipflop4_4;
+
+architecture Structural of flipflop4_4 is
+	component flipFlopDSimul
+		port(clk, D : IN STD_LOGIC;
+				Q     : OUT STD_LOGIC);
+	end component;
+
+begin
+	flipFlopD0_Q0: flipFlopDSimul port map(clk, D(0), Q(0));
+	flipFlopD1_Q1: flipFlopDSimul port map(clk, D(1), Q(1));
+	flipFlopD2_Q2: flipFlopDSimul port map(clk, D(2), Q(2));
+	flipFlopD3_Q3: flipFlopDSimul port map(clk, D(3), Q(3));
+end Structural;

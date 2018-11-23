@@ -1,0 +1,85 @@
+|HammingDecoder
+y[0] => ~NO_FANOUT~
+y[1] => ~NO_FANOUT~
+y[2] => ~NO_FANOUT~
+y[3] => ~NO_FANOUT~
+y[4] => ~NO_FANOUT~
+y[5] => ~NO_FANOUT~
+y[6] => ~NO_FANOUT~
+y[7] => ~NO_FANOUT~
+y[8] => ~NO_FANOUT~
+y[9] => ~NO_FANOUT~
+y[10] => ~NO_FANOUT~
+y[11] => ~NO_FANOUT~
+y[12] => ~NO_FANOUT~
+y[13] => ~NO_FANOUT~
+y[14] => ~NO_FANOUT~
+clk => flipFlopDSimul:flipFlopD1.clk
+clk => flipFlopDSimul:flipFlopD2.clk
+clk => flipFlopDSimul:flipFlopD3.clk
+clk => flipFlopDSimul:flipFlopD4.clk
+m_linha[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
+m_linha[1] <= m_linha[1].DB_MAX_OUTPUT_PORT_TYPE
+m_linha[2] <= m_linha[2].DB_MAX_OUTPUT_PORT_TYPE
+m_linha[3] <= m_linha[3].DB_MAX_OUTPUT_PORT_TYPE
+m_linha[4] <= m_linha[4].DB_MAX_OUTPUT_PORT_TYPE
+m_linha[5] <= m_linha[5].DB_MAX_OUTPUT_PORT_TYPE
+m_linha[6] <= m_linha[6].DB_MAX_OUTPUT_PORT_TYPE
+m_linha[7] <= m_linha[7].DB_MAX_OUTPUT_PORT_TYPE
+m_linha[8] <= m_linha[8].DB_MAX_OUTPUT_PORT_TYPE
+m_linha[9] <= m_linha[9].DB_MAX_OUTPUT_PORT_TYPE
+m_linha[10] <= m_linha[10].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|flipFlopDSimul:flipFlopD1
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|flipFlopDSimul:flipFlopD2
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|flipFlopDSimul:flipFlopD3
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|flipFlopDSimul:flipFlopD4
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
