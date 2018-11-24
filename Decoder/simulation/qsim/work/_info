@@ -1,0 +1,147 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+Z0 dC:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/simulation/qsim
+Ehammingdecoder
+Z1 w1543075619
+Z2 DPx9 cycloneiv 19 cycloneiv_atom_pack 0 22 <z:=^zLc?_L<65bN0V5Ho0
+Z3 DPx9 cycloneiv 20 cycloneiv_components 0 22 _F^j:l?dZ0Xmd_Z]?K7Gg1
+Z4 DPx4 ieee 16 vital_primitives 0 22 G>kiXP8Q9dRClKfK1Zn7j1
+Z5 DPx6 altera 11 dffeas_pack 0 22 :S1C`o89Vbe5bV6`:6CaB3
+Z6 DPx4 ieee 12 vital_timing 0 22 J>EBealN09f8GzldA[z2>3
+Z7 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z8 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z9 DPx6 altera 28 altera_primitives_components 0 22 z?[99Tn<@QGNik3V1c6ah1
+R0
+Z10 8Hamming_Decoder.vho
+Z11 FHamming_Decoder.vho
+l0
+L36
+V8CYJRz<2mz0UkAP6YlOLL3
+!s100 3WkKm_0IbA=f`FRboBbk00
+Z12 OV;C;10.5b;63
+32
+Z13 !s110 1543075620
+!i10b 1
+Z14 !s108 1543075620.000000
+Z15 !s90 -work|work|Hamming_Decoder.vho|
+Z16 !s107 Hamming_Decoder.vho|
+!i113 1
+Z17 o-work work
+Z18 tExplicit 1 CvgOpt 0
+Astructure
+R2
+R3
+R4
+R5
+R6
+R7
+R8
+R9
+DEx4 work 14 hammingdecoder 0 22 8CYJRz<2mz0UkAP6YlOLL3
+l92
+L44
+VZmLQ]Kz?LVB>BdlXoc7Ce3
+!s100 B01mDCAfNKOL_bDH3X?I>3
+R12
+32
+R13
+!i10b 1
+R14
+R15
+R16
+!i113 1
+R17
+R18
+Ehammingdecoder_vhd_vec_tst
+Z19 w1543075617
+R7
+R8
+R0
+Z20 8Waveform6.vwf.vht
+Z21 FWaveform6.vwf.vht
+l0
+L31
+VLPT[^M`>GMoH1Z4PB601Y1
+!s100 JS?TJViTIoDE577g[Q6hN2
+R12
+32
+R13
+!i10b 1
+R14
+Z22 !s90 -work|work|Waveform6.vwf.vht|
+Z23 !s107 Waveform6.vwf.vht|
+!i113 1
+R17
+R18
+Ahammingdecoder_arch
+R7
+R8
+Z24 DEx4 work 26 hammingdecoder_vhd_vec_tst 0 22 LPT[^M`>GMoH1Z4PB601Y1
+l46
+L33
+VLICZoihaQNFo>ZOPVBS4]0
+!s100 oZX6FIM3G2J:1B@KiRJ:H3
+R12
+32
+R13
+!i10b 1
+R14
+R22
+R23
+!i113 1
+R17
+R18
+Ehard_block
+Z25 w1543075132
+R4
+R2
+R6
+R7
+R8
+R3
+R0
+R10
+R11
+l0
+L34
+Vc_zG6gj]l9@McI1b^mKMk3
+!s100 ePBnogNIYclWVmd<QYN@33
+R12
+32
+Z26 !s110 1543075133
+!i10b 1
+Z27 !s108 1543075133.000000
+R15
+R16
+!i113 1
+R17
+R18
+Astructure
+R4
+R2
+R6
+R7
+R8
+R3
+DEx4 work 10 hard_block 0 22 c_zG6gj]l9@McI1b^mKMk3
+l64
+L50
+V^TJfMN143Hleg=oLnW2^A1
+!s100 9XRhD6F>^g=RX1;2c[R1L2
+R12
+32
+R26
+!i10b 1
+R27
+R15
+R16
+!i113 1
+R17
+R18

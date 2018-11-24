@@ -91,7 +91,7 @@ entity ShiftRegister is
 	port (clk 	 : in std_logic;
 			input  : in std_logic;
 			enable : in std_logic;
-			output : out std_logic);
+			output : out std_logic_vector(10 downto 0));
 end ShiftRegister;
 
 architecture structural of ShiftRegister is
@@ -100,7 +100,7 @@ architecture structural of ShiftRegister is
         nSet, nRst: IN STD_LOGIC;
         Q, nQ: OUT STD_LOGIC);
 	end component;
-	signal connect : std_logic_vector(13 downto 0);
+	signal connect : std_logic_vector(10 downto 0);
 begin
 	flipflop_1  : flipFlopDSimul port map(clk, input, '1', '1', connect(0));
 	flipflop_2  : flipFlopDSimul port map(clk, connect(0), '1', '1', connect(1));
@@ -113,10 +113,8 @@ begin
 	flipflop_9  : flipFlopDSimul port map(clk, connect(7), '1', '1', connect(8));
 	flipflop_10 : flipFlopDSimul port map(clk, connect(8), '1', '1', connect(9));
 	flipflop_11 : flipFlopDSimul port map(clk, connect(9), '1', '1', connect(10));
-	flipflop_12 : flipFlopDSimul port map(clk, connect(10), '1', '1', connect(11));
-	flipflop_13 : flipFlopDSimul port map(clk, connect(11), '1', '1', connect(12));
-	flipflop_14 : flipFlopDSimul port map(clk, connect(12), '1', '1', connect(13));
-	flipflop_15 : flipFlopDSimul port map(clk, connect(13), '1', '1', output);
+	
+	output <= connect;
 
 end structural;
 

@@ -1,5 +1,5 @@
 Flow report for Hamming_Decoder
-Sat Nov 24 12:15:36 2018
+Sat Nov 24 16:06:59 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -40,24 +40,24 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Flow Summary                                                                     ;
 +------------------------------------+---------------------------------------------+
-; Flow Status                        ; Flow Failed - Sat Nov 24 12:15:36 2018      ;
+; Flow Status                        ; Successful - Sat Nov 24 16:06:59 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Hamming_Decoder                             ;
 ; Top-level Entity Name              ; HammingDecoder                              ;
 ; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; N/A until Partition Merge                   ;
-;     Total combinational functions  ; N/A until Partition Merge                   ;
-;     Dedicated logic registers      ; N/A until Partition Merge                   ;
-; Total registers                    ; N/A until Partition Merge                   ;
-; Total pins                         ; N/A until Partition Merge                   ;
-; Total virtual pins                 ; N/A until Partition Merge                   ;
-; Total memory bits                  ; N/A until Partition Merge                   ;
-; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
-; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                   ;
-; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                   ;
-; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                   ;
-; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                   ;
-; Total PLLs                         ; N/A until Partition Merge                   ;
+; Total logic elements               ; 16                                          ;
+;     Total combinational functions  ; 16                                          ;
+;     Dedicated logic registers      ; 8                                           ;
+; Total registers                    ; 8                                           ;
+; Total pins                         ; 13                                          ;
+; Total virtual pins                 ; 0                                           ;
+; Total memory bits                  ; 0                                           ;
+; Embedded Multiplier 9-bit elements ; 0                                           ;
+; Total GXB Receiver Channel PCS     ; 0                                           ;
+; Total GXB Receiver Channel PMA     ; 0                                           ;
+; Total GXB Transmitter Channel PCS  ; 0                                           ;
+; Total GXB Transmitter Channel PMA  ; 0                                           ;
+; Total PLLs                         ; 0                                           ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -66,7 +66,7 @@ refer to the applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 11/24/2018 12:15:25 ;
+; Start date & time ; 11/24/2018 16:03:52 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Hamming_Decoder     ;
 +-------------------+---------------------+
@@ -77,7 +77,7 @@ refer to the applicable agreement for further details.
 +-------------------------------------+----------------------------------------+-----------------+----------------+------------+
 ; Assignment Name                     ; Value                                  ; Default Value   ; Entity Name    ; Section Id ;
 +-------------------------------------+----------------------------------------+-----------------+----------------+------------+
-; COMPILER_SIGNATURE_ID               ; 218472132228983.154306172501932        ; --              ; --             ; --         ;
+; COMPILER_SIGNATURE_ID               ; 218472132228983.154307543106932        ; --              ; --             ; --         ;
 ; PARTITION_COLOR                     ; -- (Not supported for targeted family) ; --              ; HammingDecoder ; Top        ;
 ; PARTITION_FITTER_PRESERVATION_LEVEL ; -- (Not supported for targeted family) ; --              ; HammingDecoder ; Top        ;
 ; PARTITION_NETLIST_TYPE              ; -- (Not supported for targeted family) ; --              ; HammingDecoder ; Top        ;
@@ -91,8 +91,10 @@ refer to the applicable agreement for further details.
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name          ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis ; 00:00:12     ; 1.0                     ; 732 MB              ; 00:00:26                           ;
-; Total                ; 00:00:12     ; --                      ; --                  ; 00:00:26                           ;
+; Analysis & Synthesis ; 00:00:18     ; 1.0                     ; 745 MB              ; 00:00:26                           ;
+; EDA Netlist Writer   ; 00:00:01     ; 1.0                     ; 594 MB              ; 00:00:01                           ;
+; EDA Netlist Writer   ; 00:00:02     ; 1.0                     ; 599 MB              ; 00:00:01                           ;
+; Total                ; 00:00:21     ; --                      ; --                  ; 00:00:28                           ;
 +----------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 
@@ -102,6 +104,8 @@ refer to the applicable agreement for further details.
 ; Module Name          ; Machine Hostname ; OS Name    ; OS Version ; Processor type ;
 +----------------------+------------------+------------+------------+----------------+
 ; Analysis & Synthesis ; DESKTOP-R2IS75E  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-R2IS75E  ; Windows 10 ; 10.0       ; x86_64         ;
+; EDA Netlist Writer   ; DESKTOP-R2IS75E  ; Windows 10 ; 10.0       ; x86_64         ;
 +----------------------+------------------+------------+------------+----------------+
 
 
@@ -109,6 +113,8 @@ refer to the applicable agreement for further details.
 ; Flow Log ;
 ------------
 quartus_map --read_settings_files=on --write_settings_files=off Hamming_Decoder -c Hamming_Decoder
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hamming_Decoder -c Hamming_Decoder --vector_source="C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Waveform6.vwf" --testbench_file="C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/simulation/qsim/Waveform6.vwf.vht"
+quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/simulation/qsim/" Hamming_Decoder -c Hamming_Decoder
 
 
 

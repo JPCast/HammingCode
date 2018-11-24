@@ -2,7 +2,32 @@
 	"partitions" : [
 		{
 			"name" : "Top",
-			"pins" : []
+			"pins" : [
+				{
+					"name" : "m_linha[0]",
+					"strict" : false
+				},
+				{
+					"name" : "m_linha[1]",
+					"strict" : false
+				},
+				{
+					"name" : "m_linha[2]",
+					"strict" : false
+				},
+				{
+					"name" : "m_linha[3]",
+					"strict" : false
+				},
+				{
+					"name" : "y",
+					"strict" : false
+				},
+				{
+					"name" : "clk",
+					"strict" : false
+				}
+			]
 		}
 	]
 }
