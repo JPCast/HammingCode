@@ -1,10 +1,10 @@
-Analysis & Synthesis Status : Successful - Thu Nov 15 18:41:59 2018
+Analysis & Synthesis Status : Successful - Sat Nov 24 17:06:40 2018
 Quartus Prime Version : 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 Revision Name : Hamming_Code
 Top-level Entity Name : HammingEncoder
 Family : Cyclone IV GX
-Total logic elements : 6
-    Total combinational functions : 6
+Total logic elements : 7
+    Total combinational functions : 7
     Dedicated logic registers : 0
 Total registers : 0
 Total pins : 26

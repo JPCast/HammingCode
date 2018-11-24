@@ -1,7 +1,7 @@
 # do Hamming_Code.do
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:41:15 on Nov 15,2018
+# Start time: 17:08:10 on Nov 24,2018
 # vcom -work work Hamming_Code.vho 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
@@ -10,24 +10,22 @@
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneiv_atom_pack
 # -- Loading package cycloneiv_components
-# -- Compiling entity hard_block
-# -- Compiling architecture structure of hard_block
 # -- Compiling entity HammingEncoder
 # -- Compiling architecture structure of HammingEncoder
-# End time: 18:41:15 on Nov 15,2018, Elapsed time: 0:00:00
+# End time: 17:08:10 on Nov 24,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:41:15 on Nov 15,2018
-# vcom -work work result3_final.vwf.vht 
+# Start time: 17:08:10 on Nov 24,2018
+# vcom -work work RESULTADOFINAL.vwf.vht 
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity HammingEncoder_vhd_vec_tst
 # -- Compiling architecture HammingEncoder_arch of HammingEncoder_vhd_vec_tst
-# End time: 18:41:15 on Nov 15,2018, Elapsed time: 0:00:00
+# End time: 17:08:10 on Nov 24,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 # vsim -novopt -c -t 1ps -L cycloneiv -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.HammingEncoder_vhd_vec_tst 
-# Start time: 18:41:15 on Nov 15,2018
+# Start time: 17:08:10 on Nov 24,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -37,11 +35,10 @@
 # Loading cycloneiv.cycloneiv_atom_pack(body)
 # Loading cycloneiv.cycloneiv_components
 # Loading work.hammingencoder(structure)
-# Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneiv.cycloneiv_io_obuf(arch)
 # Loading cycloneiv.cycloneiv_io_ibuf(arch)
 # Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
-# after#33
-# End time: 18:41:15 on Nov 15,2018, Elapsed time: 0:00:00
+# after#31
+# End time: 17:08:11 on Nov 24,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0

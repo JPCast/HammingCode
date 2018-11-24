@@ -3,7 +3,7 @@ $comment
 		vcd file Hamming_Code.msim.vcd -direction
 $end
 $date
-	Thu Nov 15 18:41:15 2018
+	Sat Nov 24 17:08:11 2018
 $end
 $version
 	ModelSim Version 10.5b
@@ -13,32 +13,32 @@ $timescale
 $end
 
 $scope module hammingencoder_vhd_vec_tst $end
-$var wire 1 ! dIn [10] $end
-$var wire 1 " dIn [9] $end
-$var wire 1 # dIn [8] $end
-$var wire 1 $ dIn [7] $end
-$var wire 1 % dIn [6] $end
-$var wire 1 & dIn [5] $end
-$var wire 1 ' dIn [4] $end
-$var wire 1 ( dIn [3] $end
-$var wire 1 ) dIn [2] $end
-$var wire 1 * dIn [1] $end
-$var wire 1 + dIn [0] $end
-$var wire 1 , dOut [14] $end
-$var wire 1 - dOut [13] $end
-$var wire 1 . dOut [12] $end
-$var wire 1 / dOut [11] $end
-$var wire 1 0 dOut [10] $end
-$var wire 1 1 dOut [9] $end
-$var wire 1 2 dOut [8] $end
-$var wire 1 3 dOut [7] $end
-$var wire 1 4 dOut [6] $end
-$var wire 1 5 dOut [5] $end
-$var wire 1 6 dOut [4] $end
-$var wire 1 7 dOut [3] $end
-$var wire 1 8 dOut [2] $end
-$var wire 1 9 dOut [1] $end
-$var wire 1 : dOut [0] $end
+$var wire 1 ! m [0] $end
+$var wire 1 " m [1] $end
+$var wire 1 # m [2] $end
+$var wire 1 $ m [3] $end
+$var wire 1 % m [4] $end
+$var wire 1 & m [5] $end
+$var wire 1 ' m [6] $end
+$var wire 1 ( m [7] $end
+$var wire 1 ) m [8] $end
+$var wire 1 * m [9] $end
+$var wire 1 + m [10] $end
+$var wire 1 , x [0] $end
+$var wire 1 - x [1] $end
+$var wire 1 . x [2] $end
+$var wire 1 / x [3] $end
+$var wire 1 0 x [4] $end
+$var wire 1 1 x [5] $end
+$var wire 1 2 x [6] $end
+$var wire 1 3 x [7] $end
+$var wire 1 4 x [8] $end
+$var wire 1 5 x [9] $end
+$var wire 1 6 x [10] $end
+$var wire 1 7 x [11] $end
+$var wire 1 8 x [12] $end
+$var wire 1 9 x [13] $end
+$var wire 1 : x [14] $end
 
 $scope module i1 $end
 $var wire 1 ; gnd $end
@@ -50,64 +50,65 @@ $var wire 1 @ devpor $end
 $var wire 1 A ww_devoe $end
 $var wire 1 B ww_devclrn $end
 $var wire 1 C ww_devpor $end
-$var wire 1 D ww_dIn [10] $end
-$var wire 1 E ww_dIn [9] $end
-$var wire 1 F ww_dIn [8] $end
-$var wire 1 G ww_dIn [7] $end
-$var wire 1 H ww_dIn [6] $end
-$var wire 1 I ww_dIn [5] $end
-$var wire 1 J ww_dIn [4] $end
-$var wire 1 K ww_dIn [3] $end
-$var wire 1 L ww_dIn [2] $end
-$var wire 1 M ww_dIn [1] $end
-$var wire 1 N ww_dIn [0] $end
-$var wire 1 O ww_dOut [14] $end
-$var wire 1 P ww_dOut [13] $end
-$var wire 1 Q ww_dOut [12] $end
-$var wire 1 R ww_dOut [11] $end
-$var wire 1 S ww_dOut [10] $end
-$var wire 1 T ww_dOut [9] $end
-$var wire 1 U ww_dOut [8] $end
-$var wire 1 V ww_dOut [7] $end
-$var wire 1 W ww_dOut [6] $end
-$var wire 1 X ww_dOut [5] $end
-$var wire 1 Y ww_dOut [4] $end
-$var wire 1 Z ww_dOut [3] $end
-$var wire 1 [ ww_dOut [2] $end
-$var wire 1 \ ww_dOut [1] $end
-$var wire 1 ] ww_dOut [0] $end
-$var wire 1 ^ \dOut[0]~output_o\ $end
-$var wire 1 _ \dOut[1]~output_o\ $end
-$var wire 1 ` \dOut[2]~output_o\ $end
-$var wire 1 a \dOut[3]~output_o\ $end
-$var wire 1 b \dOut[4]~output_o\ $end
-$var wire 1 c \dOut[5]~output_o\ $end
-$var wire 1 d \dOut[6]~output_o\ $end
-$var wire 1 e \dOut[7]~output_o\ $end
-$var wire 1 f \dOut[8]~output_o\ $end
-$var wire 1 g \dOut[9]~output_o\ $end
-$var wire 1 h \dOut[10]~output_o\ $end
-$var wire 1 i \dOut[11]~output_o\ $end
-$var wire 1 j \dOut[12]~output_o\ $end
-$var wire 1 k \dOut[13]~output_o\ $end
-$var wire 1 l \dOut[14]~output_o\ $end
-$var wire 1 m \dIn[4]~input_o\ $end
-$var wire 1 n \dIn[8]~input_o\ $end
-$var wire 1 o \dIn[6]~input_o\ $end
-$var wire 1 p \dIn[0]~input_o\ $end
-$var wire 1 q \dIn[3]~input_o\ $end
-$var wire 1 r \dIn[2]~input_o\ $end
-$var wire 1 s \dIn[9]~input_o\ $end
-$var wire 1 t \dOut~0_combout\ $end
-$var wire 1 u \dOut~1_combout\ $end
-$var wire 1 v \dIn[1]~input_o\ $end
-$var wire 1 w \dIn[7]~input_o\ $end
-$var wire 1 x \dOut~2_combout\ $end
-$var wire 1 y \dIn[5]~input_o\ $end
-$var wire 1 z \dOut~3_combout\ $end
-$var wire 1 { \dIn[10]~input_o\ $end
-$var wire 1 | \dOut~4_combout\ $end
-$var wire 1 } \dOut~5_combout\ $end
+$var wire 1 D ww_m [0] $end
+$var wire 1 E ww_m [1] $end
+$var wire 1 F ww_m [2] $end
+$var wire 1 G ww_m [3] $end
+$var wire 1 H ww_m [4] $end
+$var wire 1 I ww_m [5] $end
+$var wire 1 J ww_m [6] $end
+$var wire 1 K ww_m [7] $end
+$var wire 1 L ww_m [8] $end
+$var wire 1 M ww_m [9] $end
+$var wire 1 N ww_m [10] $end
+$var wire 1 O ww_x [0] $end
+$var wire 1 P ww_x [1] $end
+$var wire 1 Q ww_x [2] $end
+$var wire 1 R ww_x [3] $end
+$var wire 1 S ww_x [4] $end
+$var wire 1 T ww_x [5] $end
+$var wire 1 U ww_x [6] $end
+$var wire 1 V ww_x [7] $end
+$var wire 1 W ww_x [8] $end
+$var wire 1 X ww_x [9] $end
+$var wire 1 Y ww_x [10] $end
+$var wire 1 Z ww_x [11] $end
+$var wire 1 [ ww_x [12] $end
+$var wire 1 \ ww_x [13] $end
+$var wire 1 ] ww_x [14] $end
+$var wire 1 ^ \x[14]~output_o\ $end
+$var wire 1 _ \x[13]~output_o\ $end
+$var wire 1 ` \x[12]~output_o\ $end
+$var wire 1 a \x[11]~output_o\ $end
+$var wire 1 b \x[10]~output_o\ $end
+$var wire 1 c \x[9]~output_o\ $end
+$var wire 1 d \x[8]~output_o\ $end
+$var wire 1 e \x[7]~output_o\ $end
+$var wire 1 f \x[6]~output_o\ $end
+$var wire 1 g \x[5]~output_o\ $end
+$var wire 1 h \x[4]~output_o\ $end
+$var wire 1 i \x[3]~output_o\ $end
+$var wire 1 j \x[2]~output_o\ $end
+$var wire 1 k \x[1]~output_o\ $end
+$var wire 1 l \x[0]~output_o\ $end
+$var wire 1 m \m[10]~input_o\ $end
+$var wire 1 n \m[6]~input_o\ $end
+$var wire 1 o \m[5]~input_o\ $end
+$var wire 1 p \m[4]~input_o\ $end
+$var wire 1 q \xor_operator17|x~0_combout\ $end
+$var wire 1 r \m[8]~input_o\ $end
+$var wire 1 s \m[1]~input_o\ $end
+$var wire 1 t \m[0]~input_o\ $end
+$var wire 1 u \xor_operator17|x~combout\ $end
+$var wire 1 v \m[3]~input_o\ $end
+$var wire 1 w \xor_operator13|x~0_combout\ $end
+$var wire 1 x \m[2]~input_o\ $end
+$var wire 1 y \m[9]~input_o\ $end
+$var wire 1 z \xor_operator13|x~combout\ $end
+$var wire 1 { \m[7]~input_o\ $end
+$var wire 1 | \xor_operator4|x~0_combout\ $end
+$var wire 1 } \xor_operator8|x~combout\ $end
+$var wire 1 ~ \xor_operator5|x~combout\ $end
 $upscope $end
 $upscope $end
 $enddefinitions $end
@@ -122,8 +123,8 @@ x=
 1A
 1B
 1C
-0^
-0_
+1^
+1_
 1`
 0a
 0b
@@ -139,21 +140,22 @@ x=
 1l
 0m
 0n
-1o
-0p
-0q
+0o
+1p
+1q
 1r
 0s
 1t
-0u
+1u
 0v
-0w
+1w
 0x
 0y
-0z
-1{
+1z
+0{
 1|
-0}
+1}
+0~
 1!
 0"
 0#
@@ -165,21 +167,6 @@ x=
 1)
 0*
 0+
-1,
-0-
-0.
-0/
-10
-01
-02
-03
-14
-05
-06
-07
-18
-09
-0:
 1D
 0E
 0F
@@ -204,7 +191,22 @@ x=
 0Y
 0Z
 1[
-0\
-0]
+1\
+1]
+1,
+0-
+0.
+0/
+10
+01
+02
+03
+14
+05
+06
+07
+18
+19
+1:
 $end
 #1000000

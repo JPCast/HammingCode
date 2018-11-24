@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Hamming_Code
-Thu Nov 15 18:42:00 2018
+Sat Nov 24 17:06:40 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -42,13 +42,13 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 15 18:41:59 2018       ;
+; Analysis & Synthesis Status        ; Successful - Sat Nov 24 17:06:40 2018       ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Hamming_Code                                ;
 ; Top-level Entity Name              ; HammingEncoder                              ;
 ; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; 6                                           ;
-;     Total combinational functions  ; 6                                           ;
+; Total logic elements               ; 7                                           ;
+;     Total combinational functions  ; 7                                           ;
 ;     Dedicated logic registers      ; 0                                           ;
 ; Total registers                    ; 0                                           ;
 ; Total pins                         ; 26                                          ;
@@ -164,13 +164,14 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                          ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                   ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
-; HammingEncoder.vhd               ; yes             ; User VHDL File  ; C:/Users/Gisela Pinto/Documents/ACA/Project/HammingEncoder.vhd ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------+---------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                      ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
+; HammingEncoder.vhd               ; yes             ; User VHDL File  ; C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/HammingEncoder.vhd ;         ;
+; xor_operator.vhd                 ; yes             ; User VHDL File  ; C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/xor_operator.vhd   ;         ;
++----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
 
 
 +---------------------------------------------+
@@ -182,20 +183,25 @@ refer to the applicable agreement for further details.
 ;                          ;                  ;
 ; DSP block 9-bit elements ; 0                ;
 ;                          ;                  ;
-; Maximum fan-out node     ; dIn[0]~input     ;
-; Maximum fan-out          ; 3                ;
-; Total fan-out            ; 65               ;
-; Average fan-out          ; 1.12             ;
+; Maximum fan-out node     ; m[10]~input      ;
+; Maximum fan-out          ; 4                ;
+; Total fan-out            ; 69               ;
+; Average fan-out          ; 1.17             ;
 +--------------------------+------------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+----------------+--------------+
-; |HammingEncoder            ; 6 (6)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 26   ; 0            ; |HammingEncoder     ; HammingEncoder ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+----------------+--------------+
++-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                   ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------+----------------+--------------+
+; Compilation Hierarchy Node       ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name                         ; Entity Name    ; Library Name ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------+----------------+--------------+
+; |HammingEncoder                  ; 7 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 26   ; 0            ; |HammingEncoder                             ; HammingEncoder ; work         ;
+;    |xor_operator:xor_operator13| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HammingEncoder|xor_operator:xor_operator13 ; xor_operator   ; work         ;
+;    |xor_operator:xor_operator17| ; 2 (2)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HammingEncoder|xor_operator:xor_operator17 ; xor_operator   ; work         ;
+;    |xor_operator:xor_operator4|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HammingEncoder|xor_operator:xor_operator4  ; xor_operator   ; work         ;
+;    |xor_operator:xor_operator5|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HammingEncoder|xor_operator:xor_operator5  ; xor_operator   ; work         ;
+;    |xor_operator:xor_operator8|  ; 1 (1)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 0    ; 0            ; |HammingEncoder|xor_operator:xor_operator8  ; xor_operator   ; work         ;
++----------------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------------------------------+----------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -220,12 +226,12 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
 ; boundary_port         ; 26                          ;
-; cycloneiii_lcell_comb ; 6                           ;
-;     normal            ; 6                           ;
-;         4 data inputs ; 6                           ;
+; cycloneiii_lcell_comb ; 7                           ;
+;     normal            ; 7                           ;
+;         4 data inputs ; 7                           ;
 ;                       ;                             ;
 ; Max LUT depth         ; 2.00                        ;
-; Average LUT depth     ; 1.76                        ;
+; Average LUT depth     ; 1.83                        ;
 +-----------------------+-----------------------------+
 
 
@@ -244,24 +250,28 @@ Note: For table entries with two numbers listed, the numbers in parentheses indi
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 15 18:41:47 2018
+    Info: Processing started: Sat Nov 24 17:06:27 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Hamming_Code -c Hamming_Code
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file hammingencoder.vhd
-    Info (12022): Found design unit 1: HammingEncoder-Behavioral File: C:/Users/Gisela Pinto/Documents/ACA/Project/HammingEncoder.vhd Line: 10
-    Info (12023): Found entity 1: HammingEncoder File: C:/Users/Gisela Pinto/Documents/ACA/Project/HammingEncoder.vhd Line: 4
+    Info (12022): Found design unit 1: HammingEncoder-Structural File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/HammingEncoder.vhd Line: 13
+    Info (12023): Found entity 1: HammingEncoder File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/HammingEncoder.vhd Line: 7
+Info (12021): Found 2 design units, including 1 entities, in source file xor_operator.vhd
+    Info (12022): Found design unit 1: xor_operator-Behavioral File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/xor_operator.vhd Line: 9
+    Info (12023): Found entity 1: xor_operator File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/xor_operator.vhd Line: 4
 Info (12127): Elaborating entity "HammingEncoder" for the top level hierarchy
+Info (12128): Elaborating entity "xor_operator" for hierarchy "xor_operator:xor_operator0" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/HammingEncoder.vhd Line: 24
 Info (286030): Timing-Driven Synthesis is running
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Info (21057): Implemented 32 device resources after synthesis - the final resource count might be different
+Info (21057): Implemented 33 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 11 input pins
     Info (21059): Implemented 15 output pins
-    Info (21061): Implemented 6 logic cells
+    Info (21061): Implemented 7 logic cells
 Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 741 megabytes
-    Info: Processing ended: Thu Nov 15 18:42:00 2018
+    Info: Peak virtual memory: 744 megabytes
+    Info: Processing ended: Sat Nov 24 17:06:40 2018
     Info: Elapsed time: 00:00:13
     Info: Total CPU time (on all processors): 00:00:26
 

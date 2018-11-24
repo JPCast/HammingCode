@@ -7,7 +7,7 @@ Note: if both ModelSim-Altera and ModelSim executables are available, ModelSim-A
 
 **** Generating the ModelSim Testbench ****
 
-quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hamming_Code -c Hamming_Code --vector_source="C:/Users/Gisela Pinto/Documents/ACA/Project/result3_final.vwf" --testbench_file="C:/Users/Gisela Pinto/Documents/ACA/Project/simulation/qsim/result3_final.vwf.vht"
+quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hamming_Code -c Hamming_Code --vector_source="C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/RESULTADOFINAL.vwf" --testbench_file="C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/simulation/qsim/RESULTADOFINAL.vwf.vht"
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -25,15 +25,16 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Thu Nov 15 18:41:11 2018
-Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hamming_Code -c Hamming_Code --vector_source="C:/Users/Gisela Pinto/Documents/ACA/Project/result3_final.vwf" --testbench_file="C:/Users/Gisela Pinto/Documents/ACA/Project/simulation/qsim/result3_final.vwf.vht"
+    Info: Processing started: Sat Nov 24 17:08:06 2018
+Info: Command: quartus_eda --gen_testbench --tool=modelsim_oem --format=vhdl --write_settings_files=off Hamming_Code -c Hamming_Code --vector_source="C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/RESULTADOFINAL.vwf" --testbench_file="C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/simulation/qsim/RESULTADOFINAL.vwf.vht"
+Info (119004): Automatically selected device EP4CGX15BF14C6 for design Hamming_Code
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 
 Completed successfully. 
 
 **** Generating the functional simulation netlist ****
 
-quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Gisela Pinto/Documents/ACA/Project/simulation/qsim/" Hamming_Code -c Hamming_Code
+quartus_eda --write_settings_files=off --simulation --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/simulation/qsim/" Hamming_Code -c Hamming_Code
 
 Info: *******************************************************************
 Info: Running Quartus Prime EDA Netlist Writer
@@ -51,13 +52,14 @@ Info: Running Quartus Prime EDA Netlist Writer
     Info: the sole purpose of programming logic devices manufactured by
     Info: Intel and sold by Intel or its authorized distributors.  Please
     Info: refer to the applicable agreement for further details.
-    Info: Processing started: Thu Nov 15 18:41:13 2018
-Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Gisela Pinto/Documents/ACA/Project/simulation/qsim/" Hamming_Code -c Hamming_Code
+    Info: Processing started: Sat Nov 24 17:08:08 2018
+Info: Command: quartus_eda --write_settings_files=off --simulation=on --functional=on --flatten_buses=off --tool=modelsim_oem --format=vhdl --output_directory="C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/simulation/qsim/" Hamming_Code -c Hamming_Code
+Info (119004): Automatically selected device EP4CGX15BF14C6 for design Hamming_Code
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (204019): Generated file Hamming_Code.vho in folder "C:/Users/Gisela Pinto/Documents/ACA/Project/simulation/qsim//" for EDA simulation tool
+Info (204019): Generated file Hamming_Code.vho in folder "C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/simulation/qsim//" for EDA simulation tool
 Info: Quartus Prime EDA Netlist Writer was successful. 0 errors, 1 warning
-    Info: Peak virtual memory: 592 megabytes
-    Info: Processing ended: Thu Nov 15 18:41:14 2018
+    Info: Peak virtual memory: 599 megabytes
+    Info: Processing ended: Sat Nov 24 17:08:09 2018
     Info: Elapsed time: 00:00:01
     Info: Total CPU time (on all processors): 00:00:01
 
@@ -65,7 +67,7 @@ Completed successfully.
 
 **** Generating the ModelSim .do script ****
 
-C:/Users/Gisela Pinto/Documents/ACA/Project/simulation/qsim/Hamming_Code.do generated.
+C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/simulation/qsim/Hamming_Code.do generated.
 
 Completed successfully. 
 
@@ -81,8 +83,9 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 
 # ** Warning: (vlib-34) Library already exists at "work".
 # Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:41:15 on Nov 15,2018
+# Start time: 17:08:10 on Nov 24,2018
 # vcom -work work Hamming_Code.vho 
+
 # -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
@@ -90,27 +93,24 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # -- Loading package VITAL_Primitives
 # -- Loading package cycloneiv_atom_pack
 # -- Loading package cycloneiv_components
-# -- Compiling entity hard_block
-# -- Compiling architecture structure of hard_block
 # -- Compiling entity HammingEncoder
 # -- Compiling architecture structure of HammingEncoder
-
-# End time: 18:41:15 on Nov 15,2018, Elapsed time: 0:00:00
+# End time: 17:08:10 on Nov 24,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
-# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
-# Start time: 18:41:15 on Nov 15,2018
-# vcom -work work result3_final.vwf.vht 
-# -- Loading package STANDARD
 
+# Model Technology ModelSim - Intel FPGA Edition vcom 10.5b Compiler 2016.10 Oct  5 2016
+# Start time: 17:08:10 on Nov 24,2018
+# vcom -work work RESULTADOFINAL.vwf.vht 
+# -- Loading package STANDARD
 # -- Loading package TEXTIO
 # -- Loading package std_logic_1164
 # -- Compiling entity HammingEncoder_vhd_vec_tst
 # -- Compiling architecture HammingEncoder_arch of HammingEncoder_vhd_vec_tst
-# End time: 18:41:15 on Nov 15,2018, Elapsed time: 0:00:00
+# End time: 17:08:10 on Nov 24,2018, Elapsed time: 0:00:00
 # Errors: 0, Warnings: 0
 
 # vsim -novopt -c -t 1ps -L cycloneiv -L altera -L altera_mf -L 220model -L sgate -L altera_lnsim work.HammingEncoder_vhd_vec_tst 
-# Start time: 18:41:15 on Nov 15,2018
+# Start time: 17:08:10 on Nov 24,2018
 # Loading std.standard
 # Loading std.textio(body)
 # Loading ieee.std_logic_1164(body)
@@ -120,27 +120,26 @@ Reading C:/intelFPGA/18.1/modelsim_ase/tcl/vsim/pref.tcl
 # Loading cycloneiv.cycloneiv_atom_pack(body)
 # Loading cycloneiv.cycloneiv_components
 # Loading work.hammingencoder(structure)
-# Loading work.hard_block(structure)
 # Loading ieee.std_logic_arith(body)
 # Loading cycloneiv.cycloneiv_io_obuf(arch)
 # Loading cycloneiv.cycloneiv_io_ibuf(arch)
 # Loading cycloneiv.cycloneiv_lcell_comb(vital_lcell_comb)
-# after#33
+# after#31
 
-# End time: 18:41:15 on Nov 15,2018, Elapsed time: 0:00:00
+# End time: 17:08:11 on Nov 24,2018, Elapsed time: 0:00:01
 # Errors: 0, Warnings: 0
 
 Completed successfully. 
 
 **** Converting ModelSim VCD to vector waveform ****
 
-Reading C:/Users/Gisela Pinto/Documents/ACA/Project/result3_final.vwf...
+Reading C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/RESULTADOFINAL.vwf...
 
-Reading C:/Users/Gisela Pinto/Documents/ACA/Project/simulation/qsim/Hamming_Code.msim.vcd...
+Reading C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/simulation/qsim/Hamming_Code.msim.vcd...
 
 Processing channel transitions... 
 
-Writing the resulting VWF to C:/Users/Gisela Pinto/Documents/ACA/Project/simulation/qsim/Hamming_Code_20181115184116.sim.vwf
+Writing the resulting VWF to C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Project/simulation/qsim/Hamming_Code_20181124170811.sim.vwf
 
 Finished VCD to VWF conversion.
 
