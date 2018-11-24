@@ -1,5 +1,5 @@
 Analysis & Synthesis report for Hamming_Decoder
-Thu Nov 22 18:48:34 2018
+Sat Nov 24 12:15:36 2018
 Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
 
 
@@ -10,17 +10,7 @@ Quartus Prime Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
   2. Analysis & Synthesis Summary
   3. Analysis & Synthesis Settings
   4. Parallel Compilation
-  5. Analysis & Synthesis Source Files Read
-  6. Analysis & Synthesis Resource Usage Summary
-  7. Analysis & Synthesis Resource Utilization by Entity
-  8. General Register Statistics
-  9. Port Connectivity Checks: "flipFlopDSimul:flipFlopD4"
- 10. Port Connectivity Checks: "flipFlopDSimul:flipFlopD3"
- 11. Port Connectivity Checks: "flipFlopDSimul:flipFlopD2"
- 12. Port Connectivity Checks: "flipFlopDSimul:flipFlopD1"
- 13. Post-Synthesis Netlist Statistics for Top Partition
- 14. Elapsed Time Per Partition
- 15. Analysis & Synthesis Messages
+  5. Analysis & Synthesis Messages
 
 
 
@@ -46,24 +36,24 @@ refer to the applicable agreement for further details.
 +----------------------------------------------------------------------------------+
 ; Analysis & Synthesis Summary                                                     ;
 +------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Nov 22 18:48:33 2018       ;
+; Analysis & Synthesis Status        ; Failed - Sat Nov 24 12:15:36 2018           ;
 ; Quartus Prime Version              ; 18.1.0 Build 625 09/12/2018 SJ Lite Edition ;
 ; Revision Name                      ; Hamming_Decoder                             ;
 ; Top-level Entity Name              ; HammingDecoder                              ;
 ; Family                             ; Cyclone IV GX                               ;
-; Total logic elements               ; 0                                           ;
-;     Total combinational functions  ; 0                                           ;
-;     Dedicated logic registers      ; 0                                           ;
-; Total registers                    ; 0                                           ;
-; Total pins                         ; 27                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total GXB Receiver Channel PCS     ; 0                                           ;
-; Total GXB Receiver Channel PMA     ; 0                                           ;
-; Total GXB Transmitter Channel PCS  ; 0                                           ;
-; Total GXB Transmitter Channel PMA  ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
+; Total logic elements               ; N/A until Partition Merge                   ;
+;     Total combinational functions  ; N/A until Partition Merge                   ;
+;     Dedicated logic registers      ; N/A until Partition Merge                   ;
+; Total registers                    ; N/A until Partition Merge                   ;
+; Total pins                         ; N/A until Partition Merge                   ;
+; Total virtual pins                 ; N/A until Partition Merge                   ;
+; Total memory bits                  ; N/A until Partition Merge                   ;
+; Embedded Multiplier 9-bit elements ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PCS     ; N/A until Partition Merge                   ;
+; Total GXB Receiver Channel PMA     ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PCS  ; N/A until Partition Merge                   ;
+; Total GXB Transmitter Channel PMA  ; N/A until Partition Merge                   ;
+; Total PLLs                         ; N/A until Partition Merge                   ;
 +------------------------------------+---------------------------------------------+
 
 
@@ -168,209 +158,46 @@ refer to the applicable agreement for further details.
 +----------------------------+-------------+
 
 
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                      ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type       ; File Name with Absolute Path                                               ; Library ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
-; HammingDecoder.vhd               ; yes             ; User VHDL File  ; C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd ;         ;
-; Adder.vhd                        ; yes             ; User VHDL File  ; C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd          ;         ;
-+----------------------------------+-----------------+-----------------+----------------------------------------------------------------------------+---------+
-
-
-+---------------------------------------------+
-; Analysis & Synthesis Resource Usage Summary ;
-+--------------------------+------------------+
-; Resource                 ; Usage            ;
-+--------------------------+------------------+
-; I/O pins                 ; 27               ;
-;                          ;                  ;
-; DSP block 9-bit elements ; 0                ;
-;                          ;                  ;
-; Maximum fan-out node     ; y[0]             ;
-; Maximum fan-out          ; 1                ;
-; Total fan-out            ; 27               ;
-; Average fan-out          ; 0.50             ;
-+--------------------------+------------------+
-
-
-+-------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                     ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+----------------+--------------+
-; Compilation Hierarchy Node ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; DSP 36x36 ; Pins ; Virtual Pins ; Full Hierarchy Name ; Entity Name    ; Library Name ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+----------------+--------------+
-; |HammingDecoder            ; 0 (0)               ; 0 (0)                     ; 0           ; 0            ; 0       ; 0         ; 0         ; 27   ; 0            ; |HammingDecoder     ; HammingDecoder ; work         ;
-+----------------------------+---------------------+---------------------------+-------------+--------------+---------+-----------+-----------+------+--------------+---------------------+----------------+--------------+
-Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
-
-
-+------------------------------------------------------+
-; General Register Statistics                          ;
-+----------------------------------------------+-------+
-; Statistic                                    ; Value ;
-+----------------------------------------------+-------+
-; Total registers                              ; 0     ;
-; Number of registers using Synchronous Clear  ; 0     ;
-; Number of registers using Synchronous Load   ; 0     ;
-; Number of registers using Asynchronous Clear ; 0     ;
-; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 0     ;
-; Number of registers using Preset             ; 0     ;
-+----------------------------------------------+-------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "flipFlopDSimul:flipFlopD4"                                                          ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nset ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; nrst ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "flipFlopDSimul:flipFlopD3"                                                          ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nset ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; nrst ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "flipFlopDSimul:flipFlopD2"                                                          ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nset ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; nrst ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+----------------------------------------------------------------------------------------------------------------+
-; Port Connectivity Checks: "flipFlopDSimul:flipFlopD1"                                                          ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; Port ; Type   ; Severity ; Details                                                                             ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-; nset ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; nrst ; Input  ; Info     ; Stuck at VCC                                                                        ;
-; q    ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-; nq   ; Output ; Info     ; Connected to dangling logic. Logic that only feeds a dangling port will be removed. ;
-+------+--------+----------+-------------------------------------------------------------------------------------+
-
-
-+-----------------------------------------------------+
-; Post-Synthesis Netlist Statistics for Top Partition ;
-+-----------------------+-----------------------------+
-; Type                  ; Count                       ;
-+-----------------------+-----------------------------+
-; boundary_port         ; 27                          ;
-; cycloneiii_lcell_comb ; 1                           ;
-;     normal            ; 1                           ;
-;         0 data inputs ; 1                           ;
-;                       ;                             ;
-; Max LUT depth         ; 0.00                        ;
-; Average LUT depth     ; 0.00                        ;
-+-----------------------+-----------------------------+
-
-
-+-------------------------------+
-; Elapsed Time Per Partition    ;
-+----------------+--------------+
-; Partition Name ; Elapsed Time ;
-+----------------+--------------+
-; Top            ; 00:00:00     ;
-+----------------+--------------+
-
-
 +-------------------------------+
 ; Analysis & Synthesis Messages ;
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
     Info: Version 18.1.0 Build 625 09/12/2018 SJ Lite Edition
-    Info: Processing started: Thu Nov 22 18:48:21 2018
+    Info: Processing started: Sat Nov 24 12:15:24 2018
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off Hamming_Decoder -c Hamming_Decoder
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
 Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file hammingdecoder.vhd
     Info (12022): Found design unit 1: HammingDecoder-Structural File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 19
     Info (12023): Found entity 1: HammingDecoder File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 12
-Info (12021): Found 6 design units, including 3 entities, in source file rom.vhd
-    Info (12022): Found design unit 1: Controlo-Structural File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/ROM.vhd Line: 11
-    Info (12022): Found design unit 2: ROM-Behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/ROM.vhd Line: 48
-    Info (12022): Found design unit 3: FullAdder4bit-Structure File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/ROM.vhd Line: 73
-    Info (12023): Found entity 1: Controlo File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/ROM.vhd Line: 5
-    Info (12023): Found entity 2: ROM File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/ROM.vhd Line: 42
-    Info (12023): Found entity 3: FullAdder4bit File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/ROM.vhd Line: 65
-Info (12021): Found 10 design units, including 5 entities, in source file adder.vhd
-    Info (12022): Found design unit 1: FullAdder-Behavioral File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 13
-    Info (12022): Found design unit 2: Adder-Behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 35
-    Info (12022): Found design unit 3: xor_operator-Behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 52
-    Info (12022): Found design unit 4: mux2_1-Behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 70
-    Info (12022): Found design unit 5: flipFlopDSimul-behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 88
-    Info (12023): Found entity 1: FullAdder File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 7
-    Info (12023): Found entity 2: Adder File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 30
-    Info (12023): Found entity 3: xor_operator File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 47
-    Info (12023): Found entity 4: mux2_1 File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 63
-    Info (12023): Found entity 5: flipFlopDSimul File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Adder.vhd Line: 82
-Info (12127): Elaborating entity "HammingDecoder" for the top level hierarchy
-Warning (10541): VHDL Signal Declaration warning at HammingDecoder.vhd(15): used implicit default value for signal "m_linha" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-Warning (10541): VHDL Signal Declaration warning at HammingDecoder.vhd(51): used implicit default value for signal "xor_out1" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 51
-Warning (10541): VHDL Signal Declaration warning at HammingDecoder.vhd(51): used implicit default value for signal "xor_out2" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 51
-Warning (10541): VHDL Signal Declaration warning at HammingDecoder.vhd(51): used implicit default value for signal "xor_out3" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 51
-Warning (10541): VHDL Signal Declaration warning at HammingDecoder.vhd(51): used implicit default value for signal "xor_out4" because signal was never assigned a value or an explicit default value. Use of implicit default value may introduce unintended design optimizations. File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 51
-Warning (10036): Verilog HDL or VHDL warning at HammingDecoder.vhd(52): object "ff_out1" assigned a value but never read File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 52
-Warning (10036): Verilog HDL or VHDL warning at HammingDecoder.vhd(52): object "ff_out2" assigned a value but never read File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 52
-Warning (10036): Verilog HDL or VHDL warning at HammingDecoder.vhd(52): object "ff_out3" assigned a value but never read File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 52
-Warning (10036): Verilog HDL or VHDL warning at HammingDecoder.vhd(52): object "ff_out4" assigned a value but never read File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 52
-Info (12128): Elaborating entity "flipFlopDSimul" for hierarchy "flipFlopDSimul:flipFlopD1" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 64
-Warning (13024): Output pins are stuck at VCC or GND
-    Warning (13410): Pin "m_linha[0]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[1]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[2]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[3]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[4]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[5]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[6]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[7]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[8]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[9]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-    Warning (13410): Pin "m_linha[10]" is stuck at GND File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 15
-Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
-    Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
-Warning (21074): Design contains 16 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "y[0]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[1]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[2]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[3]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[4]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[5]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[6]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[7]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[8]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[9]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[10]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[11]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[12]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[13]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "y[14]" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 13
-    Warning (15610): No output dependent on input pin "clk" File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 14
-Info (21057): Implemented 27 device resources after synthesis - the final resource count might be different
-    Info (21058): Implemented 16 input pins
-    Info (21059): Implemented 11 output pins
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 39 warnings
-    Info: Peak virtual memory: 751 megabytes
-    Info: Processing ended: Thu Nov 22 18:48:34 2018
-    Info: Elapsed time: 00:00:13
-    Info: Total CPU time (on all processors): 00:00:25
+Info (12021): Found 10 design units, including 5 entities, in source file arithmetic.vhd
+    Info (12022): Found design unit 1: And_operator-Behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 15
+    Info (12022): Found design unit 2: xor_operator-Behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 32
+    Info (12022): Found design unit 3: mux2_1-Behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 50
+    Info (12022): Found design unit 4: flipFlopDSimul-behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 68
+    Info (12022): Found design unit 5: ShiftRegister-structural File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 97
+    Info (12023): Found entity 1: And_operator File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 10
+    Info (12023): Found entity 2: xor_operator File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 27
+    Info (12023): Found entity 3: mux2_1 File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 43
+    Info (12023): Found entity 4: flipFlopDSimul File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 62
+    Info (12023): Found entity 5: ShiftRegister File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Arithmetic.vhd Line: 90
+Info (12021): Found 10 design units, including 5 entities, in source file controlo.vhd
+    Info (12022): Found design unit 1: Controlo-Structural File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 16
+    Info (12022): Found design unit 2: ROM-Behavior File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 65
+    Info (12022): Found design unit 3: FullAdder4bit-Structure File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 93
+    Info (12022): Found design unit 4: FullAdder-Behavioral File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 139
+    Info (12022): Found design unit 5: Counter-Behavioral File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 165
+    Info (12023): Found entity 1: Controlo File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 10
+    Info (12023): Found entity 2: ROM File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 59
+    Info (12023): Found entity 3: FullAdder4bit File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 85
+    Info (12023): Found entity 4: FullAdder File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 133
+    Info (12023): Found entity 5: Counter File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/Controlo.vhd Line: 158
+Error (10476): VHDL error at HammingDecoder.vhd(70): type of identifier "y" does not agree with its usage as "std_logic" type File: C:/Users/Gisela Pinto/Documents/ACA/HammingCode/Decoder/HammingDecoder.vhd Line: 70
+Error: Quartus Prime Analysis & Synthesis was unsuccessful. 1 error, 1 warning
+    Error: Peak virtual memory: 732 megabytes
+    Error: Processing ended: Sat Nov 24 12:15:36 2018
+    Error: Elapsed time: 00:00:12
+    Error: Total CPU time (on all processors): 00:00:26
 
 

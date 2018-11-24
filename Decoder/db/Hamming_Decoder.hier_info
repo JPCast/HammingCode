@@ -1,23 +1,25 @@
 |HammingDecoder
-y[0] => ~NO_FANOUT~
-y[1] => ~NO_FANOUT~
-y[2] => ~NO_FANOUT~
-y[3] => ~NO_FANOUT~
-y[4] => ~NO_FANOUT~
-y[5] => ~NO_FANOUT~
-y[6] => ~NO_FANOUT~
-y[7] => ~NO_FANOUT~
-y[8] => ~NO_FANOUT~
-y[9] => ~NO_FANOUT~
-y[10] => ~NO_FANOUT~
-y[11] => ~NO_FANOUT~
-y[12] => ~NO_FANOUT~
-y[13] => ~NO_FANOUT~
-y[14] => ~NO_FANOUT~
+clk => Controlo:Controlo_Unidade.clk
+clk => ShiftRegister:shiftRegister1.clk
 clk => flipFlopDSimul:flipFlopD1.clk
 clk => flipFlopDSimul:flipFlopD2.clk
 clk => flipFlopDSimul:flipFlopD3.clk
 clk => flipFlopDSimul:flipFlopD4.clk
+y[0] => ShiftRegister:shiftRegister1.input[0]
+y[1] => ShiftRegister:shiftRegister1.input[1]
+y[2] => ShiftRegister:shiftRegister1.input[2]
+y[3] => ShiftRegister:shiftRegister1.input[3]
+y[4] => ShiftRegister:shiftRegister1.input[4]
+y[5] => ShiftRegister:shiftRegister1.input[5]
+y[6] => ShiftRegister:shiftRegister1.input[6]
+y[7] => ShiftRegister:shiftRegister1.input[7]
+y[8] => ShiftRegister:shiftRegister1.input[8]
+y[9] => ShiftRegister:shiftRegister1.input[9]
+y[10] => ShiftRegister:shiftRegister1.input[10]
+y[11] => ShiftRegister:shiftRegister1.input[11]
+y[12] => ShiftRegister:shiftRegister1.input[12]
+y[13] => ShiftRegister:shiftRegister1.input[13]
+y[14] => ShiftRegister:shiftRegister1.input[14]
 m_linha[0] <= comb.DB_MAX_OUTPUT_PORT_TYPE
 m_linha[1] <= m_linha[1].DB_MAX_OUTPUT_PORT_TYPE
 m_linha[2] <= m_linha[2].DB_MAX_OUTPUT_PORT_TYPE
@@ -29,6 +31,362 @@ m_linha[7] <= m_linha[7].DB_MAX_OUTPUT_PORT_TYPE
 m_linha[8] <= m_linha[8].DB_MAX_OUTPUT_PORT_TYPE
 m_linha[9] <= m_linha[9].DB_MAX_OUTPUT_PORT_TYPE
 m_linha[10] <= m_linha[10].DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|Controlo:Controlo_Unidade
+clk => Counter:Counter1.clk
+sel_mux <= FullAdder4bit:Counter2.cout
+dataOut[0] <= ROM:Matrix_H.dataOut[0]
+dataOut[1] <= ROM:Matrix_H.dataOut[1]
+dataOut[2] <= ROM:Matrix_H.dataOut[2]
+dataOut[3] <= ROM:Matrix_H.dataOut[3]
+
+
+|HammingDecoder|Controlo:Controlo_Unidade|FullAdder4bit:Counter2
+a[0] => FullAdder:bit0.a
+a[1] => FullAdder:bit1.a
+a[2] => FullAdder:bit2.a
+a[3] => FullAdder:bit3.a
+b[0] => FullAdder:bit0.b
+b[1] => FullAdder:bit1.b
+b[2] => FullAdder:bit2.b
+b[3] => FullAdder:bit3.b
+cin => FullAdder:bit0.cin
+cout <= FullAdder:bit3.cout
+s[0] <= FullAdder:bit0.s
+s[1] <= FullAdder:bit1.s
+s[2] <= FullAdder:bit2.s
+s[3] <= FullAdder:bit3.s
+
+
+|HammingDecoder|Controlo:Controlo_Unidade|FullAdder4bit:Counter2|FullAdder:bit0
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|Controlo:Controlo_Unidade|FullAdder4bit:Counter2|FullAdder:bit1
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|Controlo:Controlo_Unidade|FullAdder4bit:Counter2|FullAdder:bit2
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|Controlo:Controlo_Unidade|FullAdder4bit:Counter2|FullAdder:bit3
+a => s.IN0
+a => cout.IN0
+a => cout.IN0
+b => s.IN1
+b => cout.IN1
+b => cout.IN1
+cin => s.IN1
+cin => cout.IN1
+s <= s.DB_MAX_OUTPUT_PORT_TYPE
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|Controlo:Controlo_Unidade|Counter:Counter1
+clk => s[0]~reg0.CLK
+clk => s[1]~reg0.CLK
+clk => s[2]~reg0.CLK
+clk => s[3]~reg0.CLK
+a[0] => Add0.IN8
+a[1] => Add0.IN7
+a[2] => Add0.IN6
+a[3] => Add0.IN5
+s[0] <= s[0]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[1] <= s[1]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[2] <= s[2]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+s[3] <= s[3]~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|Controlo:Controlo_Unidade|ROM:Matrix_H
+address[0] => Mux0.IN19
+address[0] => Mux1.IN19
+address[0] => Mux2.IN19
+address[0] => Mux3.IN19
+address[1] => Mux0.IN18
+address[1] => Mux1.IN18
+address[1] => Mux2.IN18
+address[1] => Mux3.IN18
+address[2] => Mux0.IN17
+address[2] => Mux1.IN17
+address[2] => Mux2.IN17
+address[2] => Mux3.IN17
+address[3] => Mux0.IN16
+address[3] => Mux1.IN16
+address[3] => Mux2.IN16
+address[3] => Mux3.IN16
+dataOut[0] <= Mux0.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[1] <= Mux1.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[2] <= Mux2.DB_MAX_OUTPUT_PORT_TYPE
+dataOut[3] <= Mux3.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1
+clk => flipFlopDSimul:flipflop_1.clk
+clk => flipFlopDSimul:flipflop_2.clk
+clk => flipFlopDSimul:flipflop_3.clk
+clk => flipFlopDSimul:flipflop_4.clk
+clk => flipFlopDSimul:flipflop_5.clk
+clk => flipFlopDSimul:flipflop_6.clk
+clk => flipFlopDSimul:flipflop_7.clk
+clk => flipFlopDSimul:flipflop_8.clk
+clk => flipFlopDSimul:flipflop_9.clk
+clk => flipFlopDSimul:flipflop_10.clk
+clk => flipFlopDSimul:flipflop_11.clk
+clk => flipFlopDSimul:flipflop_12.clk
+clk => flipFlopDSimul:flipflop_13.clk
+clk => flipFlopDSimul:flipflop_14.clk
+clk => flipFlopDSimul:flipflop_15.clk
+input => flipFlopDSimul:flipflop_1.D
+enable => ~NO_FANOUT~
+output <= flipFlopDSimul:flipflop_15.Q
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_1
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_2
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_3
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_4
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_5
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_6
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_7
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_8
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_9
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_10
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_11
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_12
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_13
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_14
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|ShiftRegister:shiftRegister1|flipFlopDSimul:flipflop_15
+clk => nQ~reg0.CLK
+clk => Q~reg0.CLK
+D => Q~reg0.DATAIN
+D => nQ~reg0.DATAIN
+nSet => Q.IN0
+nRst => Q.IN1
+nRst => nQ~reg0.PRESET
+nRst => Q~reg0.ACLR
+Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
+nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|And_operator:adder1
+a => cout.IN0
+b => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|And_operator:adder2
+a => cout.IN0
+b => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|And_operator:adder3
+a => cout.IN0
+b => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|And_operator:adder4
+a => cout.IN0
+b => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
 |HammingDecoder|flipFlopDSimul:flipFlopD1
@@ -81,5 +439,29 @@ nRst => nQ~reg0.PRESET
 nRst => Q~reg0.ACLR
 Q <= Q~reg0.DB_MAX_OUTPUT_PORT_TYPE
 nQ <= nQ~reg0.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|xor_operator:xor1
+a => cout.IN0
+b => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|xor_operator:xor2
+a => cout.IN0
+b => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|xor_operator:xor3
+a => cout.IN0
+b => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
+
+
+|HammingDecoder|xor_operator:xor4
+a => cout.IN0
+b => cout.IN1
+cout <= cout.DB_MAX_OUTPUT_PORT_TYPE
 
 
