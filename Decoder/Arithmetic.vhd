@@ -1,26 +1,21 @@
 library Arithmetic;
 
 ------------------------------------------------------------------------------------------------
----------------------------- Adder -------------------------------------------------------------
+---------------------------- AND -------------------------------------------------------------
 
 library IEEE;
 use IEEE.std_logic_1164.all;
 
 
 entity And_operator is
-	port(	clk : in std_logic;
+	port(	
 			a, b : in std_logic;
 			cout : out std_logic);
 end And_operator;
 
 architecture Behavior of And_operator is
 begin
-	process(clk)
-	begin
-		if(rising_edge(clk)) then
-			cout <= a and b;
-		end if;
-	end process;
+	cout <= a and b;
 end Behavior;
 
 
@@ -31,19 +26,14 @@ library IEEE;
 use IEEE.std_logic_1164.all;
 
 entity xor_operator is
-	port(	clk  : in std_logic;
+	port(	
 			a, b : in std_logic;
 			cout : out std_logic);
 end xor_operator;
 
 architecture Behavior of xor_operator is
 begin
-	process(clk)
-	begin
-		if(rising_edge(clk)) then
-			cout <= a xor b;
-		end if;
-	end process;
+	cout <= a xor b;
 end Behavior;
 
 
@@ -111,12 +101,12 @@ architecture structural of ShiftRegister is
         nSet, nRst: IN STD_LOGIC;
         Q, nQ: OUT STD_LOGIC);
 	end component;
-	signal connect : std_logic_vector(10 downto 0);
+	signal connect : std_logic_vector(15 downto 0);
 
 begin
 
 	
-	flipflop_1  : flipFlopDSimul port map(clk, input, '1', '0', connect(0), open);
+	flipflop_1  : flipFlopDSimul port map(clk, input, '0', '1', connect(0), open);
 	flipflop_2  : flipFlopDSimul port map(clk, input, '1', '1', connect(1), open);
 	flipflop_3  : flipFlopDSimul port map(clk, connect(1), '1', '1', connect(2), open);
 	flipflop_4  : flipFlopDSimul port map(clk, connect(2), '1', '1', connect(3), open);
@@ -127,11 +117,13 @@ begin
 	flipflop_9  : flipFlopDSimul port map(clk, connect(7), '1', '1', connect(8), open);
 	flipflop_10 : flipFlopDSimul port map(clk, connect(8), '1', '1', connect(9), open);
 	flipflop_11 : flipFlopDSimul port map(clk, connect(9), '1', '1', connect(10), open);
-	--flipflop_12 : flipFlopDSimul port map(clk, connect(10), '1', '1', output, open);
-	
-	output <= connect;
+	flipflop_12 : flipFlopDSimul port map(clk, connect(10), '1', '1', connect(11), open);
+	flipflop_13 : flipFlopDSimul port map(clk, connect(11), '1', '1', connect(12), open);
+	flipflop_14 : flipFlopDSimul port map(clk, connect(12), '1', '1', connect(13), open);
+	flipflop_15 : flipFlopDSimul port map(clk, connect(13), '1', '1', connect(14), open);
+	flipflop_16 : flipFlopDSimul port map(clk, connect(14), '1', '1', connect(15), open);
 
-	
+	output <= connect(15 downto 5);
 	
 
 end structural;

@@ -7,7 +7,6 @@ use IEEE.std_logic_1164.all;
 
 entity Controlo is
 	port(	clk      : in std_logic;
-			sel_mux  : out std_logic;
 			dataOut : out std_logic_vector(3 downto 0));
 end Controlo;
 
@@ -39,7 +38,7 @@ architecture Structural of Controlo is
 	
 begin
 	
-	Counter2: FullAdder4bit port map(s_count,"0000",'0',sel_mux ,s_cout);
+	Counter2: FullAdder4bit port map(s_count,"0000",'0', open ,s_cout);
 	Counter1: Counter port map(clk, s_cout, s_count);
 	Matrix_H : ROM port map(s_cout, dataOut);
 	
