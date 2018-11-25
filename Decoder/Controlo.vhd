@@ -27,7 +27,8 @@ architecture Structural of Controlo is
 	end component;
 	
 	component ROM
-		port( address : in std_logic_vector(3 downto 0);
+		port( clk : in std_logic;
+				address : in std_logic_vector(3 downto 0);
 				dataOut : out std_logic_vector(0 to 3));
 	end component;
 	
@@ -40,7 +41,7 @@ begin
 	
 	Counter2: FullAdder4bit port map(s_count,"0000",'0', open ,s_cout);
 	Counter1: Counter port map(clk, s_cout, s_count);
-	Matrix_H : ROM port map(s_cout, dataOut);
+	Matrix_H : ROM port map(clk, s_cout, dataOut);
 	
 
 end Structural;
@@ -54,7 +55,8 @@ use IEEE.std_logic_1164.all;
 use IEEE.numeric_std.all;
 
 entity ROM is
-	port(address : in std_logic_vector(3 downto 0);
+	port(clk     : in std_logic;
+			address : in std_logic_vector(3 downto 0);
 		  dataOut : out std_logic_vector(0 to 3));
 end ROM;
 
@@ -65,12 +67,15 @@ architecture Behavior of ROM is
    constant colunm4 : std_logic_vector(0 to 14) := "110011101010001";
 	
 begin
-	dataOut(0) <= colunm1(to_integer(unsigned(address)));
-	dataOut(1) <= colunm2(to_integer(unsigned(address)));
-	dataOut(2) <= colunm3(to_integer(unsigned(address)));
-	dataOut(3) <= colunm4(to_integer(unsigned(address)));
-
-	
+	process(clk)
+	begin
+		if(rising_edge(clk)) then
+			dataOut(0) <= colunm1(to_integer(unsigned(address)));
+			dataOut(1) <= colunm2(to_integer(unsigned(address)));
+			dataOut(2) <= colunm3(to_integer(unsigned(address)));
+			dataOut(3) <= colunm4(to_integer(unsigned(address)));
+		end if;
+	end process;
 end Behavior;
 -------------------------------------------------------------------------------------------------------------
 ----------------------------------------Full Adder 4 bits ----------------------------------------------------------

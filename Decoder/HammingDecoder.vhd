@@ -65,6 +65,7 @@ architecture Structural of HammingDecoder is
 	signal s_andOut   : std_logic_vector(3 downto 0); 
 	signal s_decoderOut   : std_logic_vector(10 downto 0);
 	signal s_clk   : std_logic;
+	signal s_y     : std_logic;
 
 
 begin
@@ -74,11 +75,13 @@ begin
 	---Controlo de Unidade onde se encontra uma ROM com a matriz H, um contador e um somador para ir buscar as varias colunas da matriz H
 	Controlo_Unidade : Controlo port map(s_clk, s_Controlo_out);
 	
+	flipFlopD     : flipFlopDSimul port map(s_clk, y,'1','1', s_y, open);
+
 	--	4 ands para efetuar a operaçao com os bits series de entrada e as colunas que saem do controlo de unidade
-	and1         	  : And_operator port map( y, s_Controlo_out(0), s_andOut(0));
-	and2         	  : And_operator port map( y, s_Controlo_out(1), s_andOut(1));
-	and3         	  : And_operator port map( y, s_Controlo_out(2), s_andOut(2));
-	and4         	  : And_operator port map( y, s_Controlo_out(3), s_andOut(3));
+	and1         	  : And_operator port map( s_y, s_Controlo_out(0), s_andOut(0));
+	and2         	  : And_operator port map( s_y, s_Controlo_out(1), s_andOut(1));
+	and3         	  : And_operator port map( s_y, s_Controlo_out(2), s_andOut(2));
+	and4         	  : And_operator port map( s_y, s_Controlo_out(3), s_andOut(3));
 	
 	--4 xores para efetuar as operaçoes  entre o resultado das ands e o valor que se encontra nos flip flops.
 	--A saida dos xors dNao entrada nos flip flops e num bloco que faz a deteçao do erro
@@ -89,10 +92,10 @@ begin
 	
 	
 	--flip flop com entrada as saidas dos xors devolvendo o valor que se encontra nos flip flops
-	flipFlopD1     : flipFlopDSimul port map(s_clk, s_xor_out(0),'1','1', s_ff_out(0), open);
-	flipFlopD2     : flipFlopDSimul port map(s_clk, s_xor_out(1),'1','1', s_ff_out(1), open);
-	flipFlopD3     : flipFlopDSimul port map(s_clk, s_xor_out(2),'1','1', s_ff_out(2), open);
-	flipFlopD4     : flipFlopDSimul port map(s_clk, s_xor_out(3),'1','1', s_ff_out(3), open);
+	flipFlopD1     : flipFlopDSimul port map(s_clk, s_xor_out(0),'1','1', open, s_ff_out(0));
+	flipFlopD2     : flipFlopDSimul port map(s_clk, s_xor_out(1),'1','1', open, s_ff_out(1));
+	flipFlopD3     : flipFlopDSimul port map(s_clk, s_xor_out(2),'1','1', open, s_ff_out(2));
+	flipFlopD4     : flipFlopDSimul port map(s_clk, s_xor_out(3),'1','1', open, s_ff_out(3));
 	
 	--decoder é um bloco que criamos para fazer a deteçao do erro.
 	--internamente é constiuido por equacoes logicas
@@ -100,7 +103,7 @@ begin
 	
 	--o shift tem internamente 15 flip flops para guardar os bits da mensagem que entram em serie
 	-- fazendo sair o vetor de 11 bits
-	shiftRegister1 : ShiftRegister port map(s_clk,y,  s_shiftOut);
+	shiftRegister1 : ShiftRegister port map(s_clk, s_y,  s_shiftOut);
 
 
 	-- no final para liga-se todas as saidas do shift register e decoder a xors para fazer a correçao do erro caso exista
@@ -116,6 +119,7 @@ begin
 	xor_saida9		: xor_operator port map( s_shiftOut(8), s_decoderOut(8), m_linha(8));
 	xor_saida10		: xor_operator port map( s_shiftOut(9), s_decoderOut(9), m_linha(9));
 	xor_saida11		: xor_operator port map( s_shiftOut(10), s_decoderOut(10), m_linha(10));
+
 
   
 end Structural;
